@@ -4,5 +4,5 @@
 var module6 = require('./module6.js')
 var directory = process.argv[2];
 var extension = process.argv[3];
-var func = process.argv[4];
-module6(directory, extension, func);
+var callback = process.argv[4];
+module6(directory, extension, callback);

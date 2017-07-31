@@ -5,10 +5,10 @@
 var url = process.argv[2];
 var http = require('http');
 
-http.get(url, function (response) {
+function callback(response) {
 
   var str = '';
-  var urldata = []
+  var urldata = [];
 
   response.setEncoding('utf8')
 
@@ -20,4 +20,6 @@ http.get(url, function (response) {
     console.log(urldata.join('\n'));
 
   });
-});
+};
+
+http.get(url, callback);

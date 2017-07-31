@@ -4,15 +4,17 @@
  */
 var fs = require('fs');
 
-module.exports = function (directory, extension, func) {
+function method(directory, extension, callback) {
 
   fs.readdir(directory, 'utf8', function (err, files) {
+
     if (err) {
-      return func(err);
+      return callback(err);
     } else {
       newfiles = printTextFiles(files);
     }
-    func(null, newfiles);
+    callback(null, newfiles);
+
   });
 
   function printTextFiles(files) {
@@ -35,3 +37,5 @@ module.exports = function (directory, extension, func) {
 
   };
 };
+
+module.exports = method;

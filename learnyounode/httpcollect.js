@@ -7,18 +7,19 @@ var http = require('http');
 
 function callback(response) {
 
-  var str = '';
-  var urldata = [];
-
   response.setEncoding('utf8');
+
+  var urldata = [];
+  var status = response.statusCode;
 
   response.on('data', function (data) {
     urldata.push(data);
   });
 
   response.on('end', function () {
-    console.log(urldata.join('\n'));
-
+    urldata = urldata.join('');
+    var l = urldata.length;
+    console.log(l + '\n' + urldata);
   });
 };
 

@@ -13,6 +13,7 @@ function method(directory, extension, callback) {
     } else {
       newfiles = printTextFiles(files);
     }
+
     callback(null, newfiles);
 
   });
@@ -25,11 +26,12 @@ function method(directory, extension, callback) {
 
       s = files[i];
       if (extension.includes('.')) {
-	extension = extension.substr(1);
+        extension = extension.substr(1);
       };
+
       if (s.includes('.') && (s.split('.').pop() == extension)) {
-	newfiles.push(s);
-	console.log(s);
+        newfiles.push(s);
+        console.log(s);
       };
     };
 

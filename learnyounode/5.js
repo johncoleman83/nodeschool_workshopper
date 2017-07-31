@@ -1,3 +1,7 @@
+/**
+ * takes directory and extension as input arguments to file and
+ * and prints all files with the extension in the directory
+ */
 var fs = require('fs');
 var directory = process.argv[2];
 var extension = process.argv[3];

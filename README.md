@@ -15,7 +15,7 @@ linked here: https://nodeschool.io/#workshoppers
 
 ## Author
 
-David John Coleman II, http://www.davidjohncoleman.com/
+David John Coleman II, [davidjohncoleman.com](http://www.davidjohncoleman.com/)
 
 ## License
 

@@ -14,13 +14,13 @@ var server = http.createServer(
     {
       var body = '';
       request.on('data', function (data) {
-	body += data;
+        body += data;
       });
 
       request.on('end', function () {
-	body = body.toUpperCase();
-	response.write(body);
-	response.end();
+        body = body.toUpperCase();
+        response.write(body);
+        response.end();
       });
     }
   });
